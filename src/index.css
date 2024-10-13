@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.scroller {
+    display: inline-block;
+    animation: scroll-right 10s linear infinite; /* Adjust speed (15s) as necessary */
+    transform:rotate(90deg);
+}
+  @keyframes scroll-right {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  

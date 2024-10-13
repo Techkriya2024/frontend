@@ -14,4 +14,7 @@
       transform: translateX(0%);
     }
   }
-  
+@font-face {
+    font-family: "tech";
+    src: url("assets/fonts/nasalization-rg.otf");
+  }

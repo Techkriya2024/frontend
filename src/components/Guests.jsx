@@ -29,7 +29,7 @@ export default function Guests() {
       <img
         src={sam}
         alt="samyuktha menon"
-        className="w-[15rem] h-[20rem] md:w-full md:h-full object-cover "
+        className="w-[15rem] hover:scale-105 duration-150 h-[20rem] md:w-full md:h-full object-cover "
       />
       <div className="rotate-12 absolute top-1/2 -z-10  h-full md:hidden">
         <p
@@ -45,7 +45,7 @@ export default function Guests() {
       <img
         src={sam}
         alt="samyuktha menon"
-        className="w-[15rem] h-[20rem] md:w-full md:h-full object-cover "
+        className="w-[15rem] hover:scale-105 duration-150 h-[20rem] md:w-full md:h-full object-cover "
       />
       <div className="rotate-12 absolute top-1/2 -z-10  h-full md:hidden">
         <p
@@ -61,7 +61,7 @@ export default function Guests() {
       <img
         src={sam}
         alt="samyuktha menon"
-        className="w-[15rem] h-[20rem] md:w-full md:h-full object-cover "
+        className="w-[15rem] hover:scale-105 duration-150 h-[20rem] md:w-full md:h-full object-cover "
       />
       <div className="rotate-12 absolute top-1/2 -z-10  h-full md:hidden">
         <p

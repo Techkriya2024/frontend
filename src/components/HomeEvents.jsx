@@ -11,8 +11,8 @@ export default function HomeEvents() {
   };
   return (
     <>
-      <div className="w-full shadow-inner-custom h-max bg-black relative z-10 overflow-clip">
-        <div className="sm:pt-[5rem] pt-[2rem] pb-6">
+      <div className="w-full h-max bg-[#131313] relative z-10 overflow-clip">
+        <div className="sm:pt-[5rem] pt-[3rem] pb-6">
           <div className="rotate-[10deg] sm:rotate-[5deg] origin-center  bg-yellow-400 w-full -z-10">
             <p
               className="scroller text-black font-extrabold text-[1rem] transform  w-[25rem] text-nowrap

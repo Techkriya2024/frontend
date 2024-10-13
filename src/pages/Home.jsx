@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <>
       <Guests />
-     <HomeEvents/>
+      <HomeEvents />
     </>
   );
 };

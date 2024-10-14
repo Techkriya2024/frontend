@@ -7,7 +7,8 @@ import HostelAccommodation from "./pages/HostelAccomodation";
 import OnboardingPage2 from "./pages/OnboardingPage2";
 import Signup from "./pages/Signup";
 import VerifyEmail from "./pages/VerifyEmail";
-
+import EventsPage from "./pages/Events";
+import Event from "./pages/Event";
 const Home = React.lazy(() => import("./pages/Home"));
 const Login = React.lazy(() => import("./pages/Login"));
 
@@ -22,6 +23,8 @@ const routes = [
   { path: "/login", element: <Login /> },
   { path: "/signup", element: <Signup /> },
   { path: "/verifyEmail", element: <VerifyEmail /> },
+  { path: "/events", element: <EventsPage /> },
+  { path: "/event", element: <Event />,private:true },
 ];
 
 export default routes;

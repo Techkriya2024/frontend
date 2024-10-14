@@ -3,3 +3,25 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+.outline{
+  -webkit-text-stroke-width: 0.09rem;
+  -webkit-text-stroke-color: #EBE6D0;
+  color:#0000;
+}
+.scroller {
+    display: inline-flex;
+    animation: scroll-right 10s linear infinite; /* Adjust speed (15s) as necessary */
+    transform:rotate(90deg);
+}
+  @keyframes scroll-right {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+@font-face {
+    font-family: "tech";
+    src: url("assets/fonts/nasalization-rg.otf");
+  }

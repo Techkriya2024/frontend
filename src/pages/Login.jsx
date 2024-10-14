@@ -27,8 +27,8 @@ const Login = () => {
           <div className="flex justify-between items-center w-full max-w-md py-3 mt-7">
             <div className='relative'>
               <button onClick={() => navigate('/signup')}>
-                <img src={Vector} className='absolute top-0 translate-y-[14px] -translate-x-1' />
-                <img src={Rectangle} className='translate-x-[-20px]' />
+                <img src={Vector} alt="" className='absolute top-0 translate-y-[14px] -translate-x-1' />
+                <img src={Rectangle} alt="" className='translate-x-[-20px]' />
               </button>
             </div>
             <img src={logo} alt="logo" />
@@ -41,10 +41,10 @@ const Login = () => {
 
           <div className="w-full max-w-lg mt-5 relative">
             <div className="absolute font-poppins sm:-top-0 sm:-left-[0.1px] -top-[0.5px] -left-[1px] border-r-2 py-1 border-b-2 border-white rounded-br-lg bg-black-1000 px-9 text-lg uppercase font-semibold">
-                <img src={LoginTxt} />
+                <img src={LoginTxt} alt="login"/>
             </div>
 
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 pb-2">
               <div className="flex flex-col gap-y-4 border-2 border-white p-10 py-20 sm:py-20 rounded-lg">
                 <label className="text-white font-poppins ">
                   Email
@@ -74,19 +74,20 @@ const Login = () => {
               <div className="absolute -bottom-[1px] sm:bottom-0 sm:right-0 -right-[1px]  flex items-center">
                 <div className="flex justify-center border-l-2 border-t-2 border-white rounded-tl-lg bg-black-1000 text-white px-4 py-2 sm:px-3 sm:py-2 text-lg uppercase font-semibold">
                   <button type="submit" className='bg-white font-poppins rounded-md text-black-1000 py-2 px-10 hover:scale-105 transition-all duration-200'>
-                    <img src={Btn} />
+                    <img src={Btn} alt="submit"/>
                   </button>
                 </div>
               </div>
             </form>
 
-            <p className="mt-8 text-sm font-poppins">
+           
+          </div>
+          <p className="mt-10 text-sm font-poppins">
               Don't have an account? {" "}
               <button onClick={() => navigate('/signup')} className="font-poppins text-green-500 hover:underline">
                 Sign up
               </button>
             </p>
-          </div>
         </div>
 
       </div>

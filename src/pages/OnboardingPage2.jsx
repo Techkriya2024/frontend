@@ -23,11 +23,12 @@ const OnboardingPage2 = () => {
   };
 
   return (
-    <div className='max-w-[100vw] overflow-x-hidden min-h-[100vh] bg-[#131313] flex'>
-        <img src={EllipseIcon} className="absolute" />
+    <div className='max-w-[100vw] overflow-x-hidden min-h-[100vh] overflow-clip bg-[#131313] flex -z-10'>
+        {/* <img src={EllipseIcon} className="absolute" /> */}
+      <div className="absolute h-[35rem] w-[35rem] bg-[#3D3D3D] rounded-full -translate-y-[20rem] -translate-x-[15rem] sm:-translate-x-10 z-0"></div>
       <div className='relative w-[90%] mx-auto mt-[2rem]'>
         <div className="w-full flex justify-between items-center">
-            <button>
+            <button onClick={()=>navigate(-1)}>
                 <img src={LeftArw} className='absolute top-0 translate-y-[14px] -translate-x-1' />
                 <img src={RecShape} className=' translate-x-[-20px]' />
             </button>
@@ -43,7 +44,7 @@ const OnboardingPage2 = () => {
                 </p>
             </div>
             <div className="flex flex-col justify-start items-start gap-[1rem]">
-                <img src={Heading2} className="sm:h-[1rem]" />
+                <img src={Heading2} className="sm:h-[1rem]" alt=""/>
                 <p className="text-[0.8rem] sm:text-[1rem] text-white-500 font-poppins font-light">TechKriya’24 is the National Institute of Technology,
                     Andhra Pradesh annual technological festival.
                     This event aims to be a spectacular blend of
@@ -54,7 +55,7 @@ const OnboardingPage2 = () => {
             </div>
         </div>
         <div className="absolute bottom-6 w-full justify-center items-center flex">
-            <img onClick={handleDiveInClick} src={DiveInIcon} className="cursor-pointer hover:scale-105 transition-all duration-200" />
+            <img onClick={handleDiveInClick} alt="" src={DiveInIcon} className="cursor-pointer hover:scale-105 transition-all duration-200" />
         </div>
       </div>
     </div>

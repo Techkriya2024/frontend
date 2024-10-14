@@ -52,7 +52,7 @@ const Signup = () => {
           </div>
 
           <div className="w-full max-w-lg mt-5 relative">
-            <img src={SignupTxt} />
+            <img src={SignupTxt} alt='signup' className='mb-2'/>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 w-full">
               <div className="flex flex-col gap-y-4 border-2 border-white p-10 py-20 sm:py-20 rounded-lg">
                 <label className="text-white font-poppins w-full">
@@ -99,7 +99,7 @@ const Signup = () => {
                 <div className="flex justify-center border-l-2 border-t-2 border-white rounded-tl-lg bg-black-1000 text-white px-4 py-2 sm:px-3 sm:py-2 text-lg uppercase font-semibold ">
                   <button
                     type="submit"
-                    className='bg-white-100 rounded-md text-black-900 py-2 px-8 hover:bg-richblack1-600 hover:text-white transition duration-200'
+                    className='bg-white-100 rounded-md text-black-900 py-2 px-8 hover:bg-richblack1-600 hover:text-white transition duration-200 '
                   >
                     GET STARTED
                   </button>
@@ -107,13 +107,14 @@ const Signup = () => {
               </div>
             </form>
 
-            <p className="font-poppins mt-8 text-sm">
+           
+          </div>
+          <p className="font-poppins mt-8 text-sm">
               Already have an account?{" "}
               <button onClick={() => navigate('/login')} className="text-green-500 hover:underline">
                 Login
               </button>
             </p>
-          </div>
         </div>
       </div>
     </div>

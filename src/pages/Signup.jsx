@@ -3,9 +3,8 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { setSignupData } from '../reducer/slices/authSlice';
-import MainLogo from '../assets/TechkriyaLogoText.svg';
-import Rectangle from '../assets/RectShp.svg';
-import Vector from '../assets/ArrowLeft.svg';
+import logo from '../assets/Techkriya_White.png';
+import {IoChevronBackOutline} from "react-icons/io5"
 import SignupTxt from '../assets/SignupTxt.svg'
 import toast from 'react-hot-toast';
 
@@ -38,13 +37,19 @@ const Signup = () => {
         <div className="flex flex-col items-center min-h-screen bg-richblack1-900 text-white p-4 sm:p-8 md:px-16 lg:px-24">
           <div className="flex justify-between items-center w-full max-w-md py-3 mt-7">
             <div className='relative'>
-              <button>
-                <img src={Vector} className='absolute top-0 translate-y-[14px] -translate-x-1' />
-                <img src={Rectangle} className=' translate-x-[-20px]' />
+            <button onClick={() => navigate('/signup')}>
+                {/* <img src={Vector} alt="" className='absolute top-0 translate-y-[14px] -translate-x-1' /> */}
+                {/* <img src={Rectangle} alt="" className='translate-x-[-20px]' /> */}
+            <IoChevronBackOutline
+              size={40}
+              className="border-2 text-black-600 border-black-600 rounded-md p-1"
+            />
               </button>
             </div>
-            <img src={MainLogo} />
-          </div>
+            <div className='flex justify-center gap-2 items-center'>
+            <p className='font-tech text-[1.5rem] text-white'>TECHKRIYA</p>
+            <img src={logo} className='h-[2rem]' alt="" />
+          </div>          </div>
 
           <div className="flex flex-col items-start w-full max-w-md gap-y-2 mt-6">
             <h1 className="font-bold text-2xl sm:text-3xl font-poppins">Nice to meet you 👋</h1>
@@ -97,10 +102,8 @@ const Signup = () => {
 
               <div className="absolute -bottom-[1px] sm:bottom-0 sm:right-0 -right-[1px] flex items-center">
                 <div className="flex justify-center border-l-2 border-t-2 border-white rounded-tl-lg bg-black-1000 text-white px-4 py-2 sm:px-3 sm:py-2 text-lg uppercase font-semibold ">
-                  <button
-                    type="submit"
-                    className='bg-white-100 rounded-md text-black-900 py-2 px-8 hover:bg-richblack1-600 hover:text-white transition duration-200 '
-                  >
+                <button type="submit" className='font-kindle tracking-wide bg-white  rounded-md text-black-1000 py-2 px-10 hover:scale-105 transition-all duration-200'>
+
                     GET STARTED
                   </button>
                 </div>

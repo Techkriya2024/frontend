@@ -10,7 +10,7 @@ import VerifyEmail from "./pages/VerifyEmail";
 import EventsPage from "./pages/Events";
 import Event from "./pages/Event";
 import MainPage from "./pages/MainPage";
-const Home = React.lazy(() => import("./pages/Home"));
+import Sponsors from "./pages/Sponsors";
 const Login = React.lazy(() => import("./pages/Login"));
 
 const routes = [
@@ -25,6 +25,7 @@ const routes = [
   { path: "/signup", element: <Signup /> },
   { path: "/verifyEmail", element: <VerifyEmail /> },
   { path: "/events", element: <EventsPage /> },
+  { path: "/sponsors", element: <Sponsors /> },
   { path: "/event", element: <Event />,private:true },
 ];
 

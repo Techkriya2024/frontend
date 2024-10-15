@@ -2,12 +2,9 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { login } from '../services/operations/authAPI';
-import logo from '../assets/TechkriyaLogoText.svg';
-import Rectangle from '../assets/RectShp.svg';
-import Vector from '../assets/ArrowLeft.svg';
+import logo from '../assets/Techkriya_White.png';
 import LoginTxt from '../assets/LoginTxt.svg';
-import Btn from '../assets/GetStartedTxt.svg';
-
+import {IoChevronBackOutline} from "react-icons/io5"
 const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -27,11 +24,18 @@ const Login = () => {
           <div className="flex justify-between items-center w-full max-w-md py-3 mt-7">
             <div className='relative'>
               <button onClick={() => navigate('/signup')}>
-                <img src={Vector} alt="" className='absolute top-0 translate-y-[14px] -translate-x-1' />
-                <img src={Rectangle} alt="" className='translate-x-[-20px]' />
+                {/* <img src={Vector} alt="" className='absolute top-0 translate-y-[14px] -translate-x-1' /> */}
+                {/* <img src={Rectangle} alt="" className='translate-x-[-20px]' /> */}
+            <IoChevronBackOutline
+              size={40}
+              className="border-2 text-black-600 border-black-600 rounded-md p-1"
+            />
               </button>
             </div>
-            <img src={logo} alt="logo" />
+            <div className='flex justify-center gap-2 items-center'>
+            <p className='font-tech text-[1.5rem] text-white'>TECHKRIYA</p>
+            <img src={logo} className='h-[2rem]' alt="" />
+          </div>
           </div>
 
           <div className="flex flex-col items-start w-full max-w-md gap-y-2 mt-6">
@@ -74,7 +78,7 @@ const Login = () => {
               <div className="absolute -bottom-[1px] sm:bottom-0 sm:right-0 -right-[1px]  flex items-center">
                 <div className="flex justify-center border-l-2 border-t-2 border-white rounded-tl-lg bg-black-1000 text-white px-4 py-2 sm:px-3 sm:py-2 text-lg uppercase font-semibold">
                   <button type="submit" className='bg-white font-poppins rounded-md text-black-1000 py-2 px-10 hover:scale-105 transition-all duration-200'>
-                    <img src={Btn} alt="submit"/>
+                    <p className="font-kindle tracking-wide text-[1.3rem]">get started</p>
                   </button>
                 </div>
               </div>

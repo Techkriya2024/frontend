@@ -37,10 +37,13 @@
     font-family: "tech";
     src: url("assets/fonts/nasalization-rg.otf");
   }
-  .grayscale-filter {
-    filter: grayscale(100%);
-    transition: filter 0.5s ease;
+@font-face {
+    font-family: "kindle";
+    src: url("assets/fonts/Kindex-Regular.otf");
   }
+
+
+
   .custom-clip-path {
     clip-path: circle(60% at 50% 100%); 
    }
@@ -62,52 +65,5 @@
     background-size: 400% 400%;
     animation: moveGradient 15s ease infinite;
   }
-  .cursor {
-    /* Tailwind is used for custom cursor styles */
-  }
-  
-  /* The styles for the cursor components */
-  .fixed {
-    position: fixed;
-  }
-  
-  .top-0 {
-    top: 0;
-  }
-  
-  .left-0 {
-    left: 0;
-  }
-  
-  .w-10 {
-    width: 2.5rem;
-  }
-  
-  .h-10 {
-    height: 2.5rem;
-  }
-  
-  .bg-gradient-to-r {
-    background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  }
-  
-  .from-blue-500 {
-    --tw-gradient-from: #3b82f6;
-  }
-  
-  .to-pink-500 {
-    --tw-gradient-to: #ec4899;
-  }
-  
-  .opacity-50 {
-    opacity: 0.5;
-  }
-  
-  .pointer-events-none {
-    pointer-events: none;
-  }
-  
-  .z-50 {
-    z-index: 50;
-  }
+
   

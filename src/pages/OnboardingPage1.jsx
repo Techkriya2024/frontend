@@ -1,9 +1,7 @@
 import React from 'react';
 import Logo from '../assets/ClgLogo.svg';
-import Welcome from '../assets/WelcomeOnboard.svg';
-import WelcomeDesc from '../assets/WelcomeDescOnboarding.svg';
 import WelcomeBtn from '../assets/WelcomeBtn.svg';
-import MainLogo from '../assets/TechkriyaLogoText.svg';
+import logo from '../assets/Techkriya_White.png'
 import BGimg from '../assets/WelcomeBG.jpeg';
 import { useNavigate } from 'react-router-dom';
 
@@ -26,17 +24,21 @@ const OnboardingPage1 = () => {
             <img src={Logo} className='h-[8vh]' alt="NIT AP Logo" />
             <div className='h-[8vh] bg-white w-[1px]'></div>
             <div className='flex justify-center align-top flex-col gap-[0.3rem]'>
-              <p className='text-white font-poppins font-medium text-[1rem] text-wrap'>National Institute of Technology</p>
-              <p className='text-white font-poppins font-normal text-[1rem] text-wrap'>Andhra Pradesh</p>
+              <p className='text-white font-poppins font-medium text-[0.95rem] text-wrap'>National Institute of Technology</p>
+              <p className='text-white font-poppins font-normal text-[0.95rem] text-wrap'>Andhra Pradesh</p>
             </div>
           </div>
-          <img src={MainLogo} className='sm:block hidden' alt="TechKriya Logo" />
+          <div className=' hidden sm:flex justify-center gap-2 items-center'>
+            <p className='font-tech text-[1.5rem] text-white'>TECHKRIYA</p>
+            <img src={logo} className='h-[2rem]' alt="" />
+          </div>
+          {/* <img src={MainLogo} className='sm:block hidden' alt="TechKriya Logo" /> */}
         </div>
 
         <div className='w-full absolute flex sm:justify-around justify-center sm:flex-row flex-col gap-[3rem] left-0 right-0 sm:bottom-20 bottom-4'>
-          <div className='flex flex-col gap-[2rem] justify-center items-start'>
-            <img src={Welcome} alt="Welcome Onboard" />
-            <img src={WelcomeDesc} alt="Welcome Description" />
+          <div className='flex flex-col gap-[1rem] justify-center items-start'>
+            <p className='font-kindle text-white text-[2rem]'>welcome</p>
+            <p className='text-base text-[#d0d0d0] opacity-70 font-light font-poppins'>NIT Andhra invites you to it's annual <br /> technical event: <span className='font-tech text-[1.2rem]'>TECHKRIYA'24</span></p>
           </div>
           <div className='flex justify-center items-center cursor-pointer hover:scale-105 transition-all duration-300'>
             <img src={WelcomeBtn} alt="Welcome Button" onClick={() => navigate("/onboarding2")} />

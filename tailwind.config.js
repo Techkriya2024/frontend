@@ -51,6 +51,7 @@ module.exports = {
 
     fontFamily: {
       tech: ["tech", "sans-serif"],
+      kindle:["kindle","sans-serif"]
     },
     keyframes: {
       wiggle: {

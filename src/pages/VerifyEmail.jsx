@@ -20,7 +20,7 @@ const VerifyEmail = () => {
       navigate("/signup");
       return
     }
-  },[])
+  },[navigate,signupData])
 
   const SubmitHandler = async (e) => {
     e.preventDefault();
@@ -36,7 +36,7 @@ const VerifyEmail = () => {
     <div className='relative w-[90%] mx-auto  flex flex-row py-8 justify-between items-center overflow-hidden'>
         <Link to={"/"}>
           <div className='flex text-center justify-center items-center md:border-[3px] border-2 border-black-700 rounded-lg '>
-              <img src={Vector} />
+              <img src={Vector} alt=''/>
           </div>
         </Link>
         <img src={MainLogo} alt='TechriyaNameLogo'/>
@@ -64,7 +64,7 @@ const VerifyEmail = () => {
         </form>
       </div>
     </div>
-    <img src={Btn} className='mx-auto flex justify-center items-center mt-12 mb-7' onClick={SubmitHandler} />
+    <img src={Btn} alt='' className='mx-auto flex justify-center items-center mt-12 mb-7' onClick={SubmitHandler} />
     <div className='flex flex-row gap-2 justify-center items-center'>
       <p className='text-gray-600 text-center font-poppins lg:py-4'>Didn't you receive the OTP ?</p>
       <button className="text-green-500 font-poppins">Resend OTP</button>

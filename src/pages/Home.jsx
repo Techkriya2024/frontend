@@ -2,6 +2,7 @@ import FooterC from "../components/FooterComp";
 import Guests from "../components/Guests";
 import HomeEvents from "../components/HomeEvents";
 import Landing from "../components/Landing";
+import LogosSlider from "../components/SponsorsSlider";
 import Header from "./Header";
 const Home = ({settingmenu}) => {
   return (
@@ -10,6 +11,7 @@ const Home = ({settingmenu}) => {
       <Landing />
       <Guests />
       <HomeEvents />
+      <LogosSlider/>
       <FooterC/>
     </>
   );

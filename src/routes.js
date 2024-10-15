@@ -9,11 +9,12 @@ import Signup from "./pages/Signup";
 import VerifyEmail from "./pages/VerifyEmail";
 import EventsPage from "./pages/Events";
 import Event from "./pages/Event";
+import MainPage from "./pages/MainPage";
 const Home = React.lazy(() => import("./pages/Home"));
 const Login = React.lazy(() => import("./pages/Login"));
 
 const routes = [
-  { path: "/home", element: <Home />, private: true }, 
+  { path: "/home", element: <MainPage />, private: true }, 
   { path: "/", element: <OnboardingPage1 /> },
   { path: "/onboarding2", element: <OnboardingPage2 /> },
   { path: "/updateProfile", element: <UpdateProfile />, private: true }, 

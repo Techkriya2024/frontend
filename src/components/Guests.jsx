@@ -72,7 +72,7 @@ export default function Guests() {
             alt="dj"
             className="w-[15rem] hover:scale-105 duration-150 h-[20rem] md:w-full md:h-full object-contain "
           />
-          <div className="rotate-12 absolute top-1/2 -z-10  h-full md:hidden">
+          <div className="rotate-12 absolute top-1/4 -z-10 -translate-x-[15rem]  h-full md:hidden">
             <div
               className=" text-[#EBE6D0] gap-5 scroller font-title font-extrabold text-[3.75rem] sm:text-[6rem] transform  w-[25rem] text-nowrap
           "

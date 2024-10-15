@@ -12,7 +12,7 @@ export default function HomeEvents() {
   };
   return (
     <>
-      <div className="w-full h-max bg-[#131313] relative z-0 overflow-clip">
+      <div className="w-full h-max bg-[#131313] relative z-0 overflow-clip pb-5">
         
         <div className="sm:pt-[5rem] pt-[3rem] pb-6">
           <div className="rotate-[10deg] sm:rotate-[5deg] origin-center  bg-yellow-400 w-full -z-10">
@@ -43,7 +43,7 @@ export default function HomeEvents() {
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4 p-4 ">
+        <div className="flex flex-wrap justify-center  ">
           <EventCard event={event} />
           <EventCard event={event} />
           <EventCard event={event} />
@@ -51,7 +51,7 @@ export default function HomeEvents() {
         </div>
         <div className="inline-flex w-full justify-center">
 
-        <Link to={"/events"} className=" font-tech rounded-md top-0 mt-4 bg-white text-black py-2 px-6 hover:bg-gray-100 transition duration-300 text-[1.5rem]">
+        <Link to={"/events"} className=" font-tech rounded-md  bg-white text-black py-2 px-6 hover:bg-gray-100 transition duration-300 sm:text-[1.5rem]">
         EXPLORE MORE
         </Link>     
         </div>

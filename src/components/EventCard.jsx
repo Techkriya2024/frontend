@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const EventCard = ({ event }) => {
   return (
-    <div className="relative mx-auto  w-[19.6rem]">
+    <div className="relative mx-auto scale-90 sm:scale-95  w-[19.6rem]">
         <img
           src={event.image}  // Dynamic image
           alt={event.name}

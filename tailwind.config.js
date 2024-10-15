@@ -8,6 +8,11 @@ module.exports = {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
+      backgroundImage: {
+        "custom-gradient":
+          "linear-gradient(45deg, #001217, #002027, #002E36, #003C45, #004954)",
+        "land":"url('./assets/noise/noise.png')",
+      },
       colors: {
         white: {
           100: "#DCE5FB",
@@ -52,9 +57,14 @@ module.exports = {
         "0%, 100%": { transform: "translateY(5px)" }, // Move down 2px
         "50%": { transform: "translateY(-2px)" },
       },
+      rotate: {
+        "0%": { transform: "rotate(0deg)" }, // No rotation at the start and end
+        "100%": { transform: "rotate(360deg)" }, // Rotate 180 degrees at the middle
+      },
     },
     animation: {
       wiggle: "wiggle 1s ease-in-out infinite",
+      rotate:"rotate 10s linear infinite"
     },
   },
   plugins: [],

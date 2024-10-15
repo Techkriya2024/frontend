@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-
-import "./QrScanner.css";
-
+import "./QrReader.css";
 import QrScanner from "qr-scanner";
 import QrFrame from "../assets/qr-frame.svg";
 
@@ -12,10 +10,35 @@ const QrReader = () => {
   const [qrOn, setQrOn] = useState(true);
 
   const [scannedResult, setScannedResult] = useState("");
+  const [eventID, setEventID] = useState(""); 
+
+  const fetchEventData = async (url) => {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error("Failed to fetch event data");
+      }
+      const data = await response.json();
+
+      if (data?.eventID) {
+        setEventID(data.eventID);
+      }
+    } catch (error) {
+      console.error("Error fetching event data:", error);
+    }
+  };
 
   const onScanSuccess = (result) => {
-    console.log(result);
-    setScannedResult(result?.data);
+    console.log("Scanned QR code result:", result);
+
+    result = result?.data;
+
+    if (result.startsWith("http")) {
+      setScannedResult(result);
+      fetchEventData(result);
+    } else {
+      console.log("Invalid QR code. Not a URL.");
+    }
   };
 
   const onScanFail = (err) => {
@@ -54,6 +77,12 @@ const QrReader = () => {
       );
   }, [qrOn]);
 
+  const handleProceed = () => {
+    if (eventID) {
+      console.log(`Proceeding with Event ID: ${eventID}`);
+    }
+  };
+
   return (
     <div className="qr-reader">
       <video ref={videoEl}></video>
@@ -68,17 +97,19 @@ const QrReader = () => {
       </div>
 
       {scannedResult && (
-        <p
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            zIndex: 99999,
-            color: "white",
-          }}
-        >
-          Scanned Result: {scannedResult}
-        </p>
+        <div style={{ position: "absolute", top: 0, left: 0, zIndex: 99999, color: "white" }}>
+          <p>Scanned Result: {scannedResult}</p>
+
+          {eventID && (
+            <button
+              onClick={handleProceed}
+              className="bg-blue-500 text-white px-4 py-2 rounded mt-2"
+              style={{ zIndex: 100000, position: "relative" }}
+            >
+              Proceed
+            </button>
+          )}
+        </div>
       )}
     </div>
   );

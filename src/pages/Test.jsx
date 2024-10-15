@@ -1,5 +1,5 @@
 import React from 'react'
-import QrReader from '../components/QrScanner'
+import QrReader from '../components/QrReader'
 
 const Test = () => {
   return (

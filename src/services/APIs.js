@@ -8,3 +8,7 @@ export const endpoints = {
   RESETPASSTOKEN_API: BASE_URL + "/auth/resetPasswordToken",
   RESETPASSWORD_API: BASE_URL + "/auth/resetPassword",
 }
+
+export const userEndPoints = {
+  REGISTER_FOR_AN_EVENT_API : BASE_URL + "/user/register",
+}

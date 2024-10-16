@@ -41,12 +41,12 @@ export default function FooterComp() {
             <Link to={"/gallery"} className=" text-[1.2rem]">
               Gallery
             </Link>
-            <Link to={"/coreTeam"} className=" text-[1.2rem]">
+            {/* <Link to={"/coreTeam"} className=" text-[1.2rem]">
               Core Team
             </Link>
             <Link to={"/webTeam"} className=" text-[1.2rem]">
               Web Dev Team
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

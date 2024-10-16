@@ -10,7 +10,7 @@ const ButtonRow = ({ onClubSelect }) => {
     "ECEA",
     "CSEA",
     "MEA",
-    "MAGAZINE CLUB",
+    // "MAGAZINE CLUB",
     "EEEA",
     "CEA",
     "GC",

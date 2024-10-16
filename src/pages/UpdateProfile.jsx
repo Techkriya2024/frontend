@@ -60,10 +60,10 @@ const UpdateProfile = () => {
 
         <div className='sm:w-[60%] w-[100%] mx-auto flex flex-row justify-around items-center my-[3rem]'>
           <div className={`p-[0.75rem] ${imageChoice === 1 ? 'border-[1px] border-white rounded-full border-dashed' : ''}`} onClick={() => setImageChoice(1)}>
-            <img src={MaleAtr} className='hover:scale-110 sm:w-[7rem] w-[5rem] transition-all duration-300 cursor-pointer' />
+            <img alt='' src={MaleAtr} className='hover:scale-110 sm:w-[7rem] w-[5rem] transition-all duration-300 cursor-pointer' />
           </div>
           <div className={`p-[0.75rem] ${imageChoice === 2 ? 'border-[1px] border-white rounded-full border-dashed' : ''}`} onClick={() => setImageChoice(2)}>
-            <img src={FemaleAtr} className='hover:scale-110 sm:w-[7rem] w-[5rem] transition-all duration-300 cursor-pointer' />
+            <img alt='' src={FemaleAtr} className='hover:scale-110 sm:w-[7rem] w-[5rem] transition-all duration-300 cursor-pointer' />
           </div>
         </div>
 
@@ -147,7 +147,7 @@ const UpdateProfile = () => {
             {errors.outsider && <span className="text-red-500">Outsider status is required</span>}
           </label>
 
-          <img onClick={handleSubmit(onSubmit)} src={SubmitBtn} className='hover:scale-105 transition-all duration-200 cursor-pointer' />
+          <img alt='' onClick={handleSubmit(onSubmit)} src={SubmitBtn} className='hover:scale-105 transition-all duration-200 cursor-pointer' />
         </form>
       </div>
     </div>

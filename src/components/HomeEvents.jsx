@@ -1,15 +1,10 @@
 import React from "react";
-import eve from "../assets/techriya_logo_mod.png"
 import EventCard from "./EventCard";
+import {data} from "../utils/events"
 import { Link } from "react-router-dom";
 export default function HomeEvents() {
-  const event = {
-    name: "Event Name",
-    image: eve,
-    clubName: "Club Name",
-    description:
-"    Lorem, ipsum dolor sit amet consectetur.",
-  };
+  const event =data.slice(0,3)
+  
   return (
     <>
       <div className="w-full h-max bg-[#131313] relative z-0 overflow-clip pb-5">
@@ -44,9 +39,11 @@ export default function HomeEvents() {
         </div>
 
         <div className="flex flex-wrap justify-center  ">
-          <EventCard event={event} />
-          <EventCard event={event} />
-          <EventCard event={event} />
+          {
+            event.map((event) => (
+              <EventCard key={event._id} event={event} />
+            ))
+          }
           
         </div>
         <div className="inline-flex w-full justify-center">

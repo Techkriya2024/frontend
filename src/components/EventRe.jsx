@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const EventCard = ({ event }) => {
+const EventRe = ({ event }) => {
   return (
     <div className="relative mx-auto scale-90 sm:scale-95  w-[19.6rem] ">
         <img
@@ -35,7 +35,7 @@ const EventCard = ({ event }) => {
 
         </div>
         <Link to={"/event"} state={event} className="shadow-md shadow-black-700 absolute font-tech rounded-sm w-[15rem] h-[3.75rem] top-0 mt-4 bg-white text-black py-3 sm:py-2 px-6 hover:bg-gray-100 transition duration-300 text-[1.5rem] sm:text-[1.75rem]">
-          REGISTER
+          VIEW
         </Link>
         </div>
       </div>
@@ -43,4 +43,4 @@ const EventCard = ({ event }) => {
   );
 };
 
-export default EventCard;
+export default EventRe;

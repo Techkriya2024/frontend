@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import sam from "../assets/homeSp/stunts.jpg";
-import isro from "../assets/homeSp/ISRO poster.jpg"
+import sam from "../assets/homeSp/stunts.png";
+import isro from "../assets/homeSp/ISRO poster.png"
 import dj from "../assets/dj.png";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -14,17 +14,18 @@ export default function Guests() {
     images.forEach((image) => {
       gsap.fromTo(
         image,
-        { rotate: 0, scale: 0.8 },
+        { rotate: 0, scale: 1 },
         {
           rotate: 0,
-          scale: 1,
+          scale: 1.2,
           duration: 1,
-          repeat: 2,
+          repeat: 1,
           yoyo: true,
           ease: "power1.inOut",
           scrollTrigger: {
             trigger: image,
-            start: "top 80%", // Trigger when the top of the image is 80% from the top of the viewport
+            once:true,
+            start: "top 70%", // Trigger when the top of the image is 80% from the top of the viewport
             toggleActions: "play none none reset", // Play the animation when in view
           },
         }
@@ -82,8 +83,8 @@ export default function Guests() {
         <div className="sm:h-[90%] relative md:justify-center h-[25rem] z-10 w-full overflow-clip flex justify-start pt-20 p-5 items-center">
           <img
             src={sam}
-            alt="samyuktha menon"
-            className="guest-image w-[15rem] hover:scale-105 duration-150 h-[20rem] md:w-full md:h-full object-contain "
+            alt="stunts"
+            className="guest-image w-[15rem] sm:w-[25rem] hover:scale-105 duration-150 h-[20rem] md:w-full md:h-full object-contain "
           />
           <div className="rotate-12 absolute top-1/2 -z-10  h-full md:hidden">
             <p
@@ -136,7 +137,7 @@ export default function Guests() {
         <div className="sm:h-[90%] pt-20 relative md:justify-center h-[25rem] z-10 w-full overflow-clip flex justify-start p-5 items-center">
           <img
             src={isro}
-            alt="hema"
+            alt="isro"
             className="guest-image w-[15rem]  hover:scale-105 duration-150 h-[20rem] md:w-full md:h-full object-contain "
           />
           <div className="absolute top-1/2 rotate-12  -z-10 w-full h-full md:hidden">

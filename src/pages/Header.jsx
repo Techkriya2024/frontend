@@ -4,7 +4,7 @@ import { BiMenuAltRight } from "react-icons/bi";
 
 function Header({settingmenu}) {
   return (
-    <div className="w-full fixed top-0 z-30 bg-[#131313] ">
+    <div className="w-full fixed top-0 z-30 bg-[#131313]/10 backdrop-blur-sm backdrop-filter ">
 
         <div className=' flex gap-y-3 justify-between'>
             <div className='p-2 flex items-center gap-1'>

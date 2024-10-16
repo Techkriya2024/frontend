@@ -11,7 +11,7 @@ module.exports = {
       backgroundImage: {
         "custom-gradient":
           "linear-gradient(45deg, #001217, #002027, #002E36, #003C45, #004954)",
-        "land":"url('./assets/noise/noise.png')",
+        "land":"url('./assets/homeSp/home.png')",
       },
       colors: {
         white: {

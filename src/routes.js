@@ -12,8 +12,9 @@ import Event from "./pages/Event";
 import MainPage from "./pages/MainPage";
 import CoreTeam from "./pages/CoreTeam";
 import Gallery from "./pages/Gallery";
+import RegisteredEvents from "./pages/RegisteredEvents";
+import VisitedEvents from "./pages/VisitedEvents";
 const Login = React.lazy(() => import("./pages/Login"));
-
 const routes = [
   { path: "/home", element: <MainPage />, private: true }, 
   { path: "/", element: <OnboardingPage1 /> },
@@ -29,6 +30,8 @@ const routes = [
   { path: "/coreTeam", element: <CoreTeam /> },
   { path: "/gallery", element: <Gallery /> },
   { path: "/event", element: <Event />,private:true },
+  { path: "/profile/registeredEvents", element: <RegisteredEvents />,private:true },
+  { path: "/profile/visitedEvents", element: <VisitedEvents />,private:true },
 ];
 
 export default routes;

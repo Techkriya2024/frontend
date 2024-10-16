@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import Timer from "./Timer";
 import { gsap } from "gsap";
-
+import homel from "../assets/homeSp/home-left.png";
+import homer from "../assets/homeSp/home-right.png";
 export default function Landing() {
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
@@ -63,19 +64,29 @@ export default function Landing() {
   }, []);
 
   return (
-    <div className="w-full bg-[#131313] relative h-screen min-h-[25rem]  flex overflow-hidden flex-col justify-center z-0 items-center">
-<div
+    <div className="w-full bg-[#131313] relative h-screen min-h-[40rem]  flex overflow-hidden flex-col justify-center z-0 items-center">
+      <div>
+        <img
+          src={homel}
+          alt=""
+          className="absolute left-0 top-1/4 w-[15rem] sm:top-[14rem] md:top-[6rem] sm:w-[20rem]  md:w-[30rem]"
+        />
+      </div>
+      <div>
+        <img
+          src={homer}
+          alt=""
+          className="absolute right-0 w-[15rem] top-[3rem] md:-top-[6rem] sm:top-[5rem] sm:w-[20rem]  md:w-[30rem]"
+        />
+      </div>
+      {/* <div
   className="w-[30rem] h-[30rem] xl:w-[50rem]  xl:h-[50rem] absolute rounded-full shadow-2xl shadow-[#1d4143] bg-moving-gradient  -bottom-1/4 -right-1/4 "
-  style={{
-    // background: "radial-gradient(circle, #0e2c2d, #184C4E)",
-  }}
+
 ></div>
 <div
   className="w-[30rem] h-[30rem] xl:w-[50rem] xl:h-[50rem] shadow-2xl shadow-[#1d4143] bg-moving-gradient  absolute rounded-full -top-1/4 -left-1/4 "
-  style={{
-    // background: "radial-gradient(circle, #0e2c2d, #184C4E)",
-  }}
-></div>
+  
+></div> */}
       <p
         ref={titleRef}
         className="font-tech text-[2.75rem] sm:text-[5rem] z-30 text-center text-white"

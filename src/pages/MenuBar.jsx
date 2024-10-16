@@ -30,7 +30,7 @@ const MenuBar = ({ menu, settingmenu }) => {
           </Link>
           <div className="bg-[#dfdfdf] group-hover:translate-x-0  duration-150 top-0 translate-x-full w-full h-full -z-10 absolute"></div>
         </div>
-        {/* <div className="relative group z-0">
+        <div className="relative group z-0">
           <Link
             to="/profile"
             className="block px-4 py-4 border-b border-[#dfdfdf] text-lg sm:text-xl group-hover:text-black duration-150 "
@@ -38,7 +38,7 @@ const MenuBar = ({ menu, settingmenu }) => {
             PROFILE
           </Link>
           <div className="bg-[#dfdfdf] group-hover:translate-x-0  duration-150 top-0 translate-x-full w-full h-full -z-10 absolute"></div>
-        </div> */}
+        </div>
 
         <div className="relative group z-0">
           <Link

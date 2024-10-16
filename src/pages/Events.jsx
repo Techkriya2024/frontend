@@ -1,31 +1,30 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import {BASE_URL} from "../services/APIs"
+import React, { useState } from "react";
 import ButtonRow from "../components/Buttons";
 import EventCard from "../components/EventCard";
 import logo from "../assets/techriya_logo_mod.png"
+import {data} from "../utils/events"
 const EventsPage = () => {
   const [selectedClub, setSelectedClub] = useState("AI&R"); // Store selected club
-  const [events, setEvents] = useState([]); // Store events
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    const fetchEvents = async () => {
-      try {
-        let url = BASE_URL+"/event/getAllEvents";
-        const response = await axios.get(url);
-        setEvents(response.data.data);
-        setLoading(false);
-      } catch (error) {
-        console.error("Error fetching events:", error);
-      }
-    };
+ // Store events
+  // const [loading, setLoading] = useState(true);
+  // useEffect(() => {
+  //   const fetchEvents = async () => {
+  //     try {
+  //       let url = BASE_URL+"/event/getAllEvents";
+  //       const response = await axios.get(url);
+  //       setEvents(response.data.data);
+  //       setLoading(false);
+  //     } catch (error) {
+  //       console.error("Error fetching events:", error);
+  //     }
+  //   };
 
-    fetchEvents();
-  }, [selectedClub]); 
+  //   fetchEvents();
+  // }, [selectedClub]); 
 
   return (
     <>
-    {loading?
+    {false?
  (
     <div className="bg-[#131313] h-screen flex justify-center items-center w-full ">
         <img src={logo} className="w-[6rem] animate-wiggle" alt="" />
@@ -39,8 +38,8 @@ const EventsPage = () => {
           <ButtonRow onClubSelect={setSelectedClub} />
 
           <div className="flex flex-wrap justify-center gap-4 p-4">
-            {events.length > 0 ? (
-              events.map((event) =>
+            {data.length > 0 ? (
+              data.map((event) =>
                 event.clubName === selectedClub ? (
                   <EventCard key={event._id} event={event} />
                 ) : null

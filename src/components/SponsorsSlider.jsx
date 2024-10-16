@@ -1,66 +1,23 @@
-import React from "react";
-import "./Slider.css"; // Keep this for the keyframes
-import img from "../assets/techriya_logo_mod.png"
+import React from 'react';
+import './Slider.css'; // Custom CSS for animation
+import img from "../assets/techriya_logo_mod.png";
+
+const sponsors = [img, img, img, img, img]; // Adjust with real logos
+
 const LogosSlider = () => {
-  // Placeholder array for logos
-  const logos = [
-    {
-      logo:img,
-      name:"Techriya",
-    },
-    {
-      logo:img,
-      name:"Techriya",
-    },
-    {
-      logo:img,
-      name:"Techriya",
-    },
-    {
-      logo:img,
-      name:"Techriya",
-    },
-    {
-      logo:img,
-      name:"Techriya",
-    },
-    {
-      logo:img,
-      name:"Techriya",
-    },
-    {
-      logo:img,
-      name:"Techriya",
-    },
-    {
-      logo:img,
-      name:"Techriya",
-    },
-    {
-      logo:img,
-      name:"Techriya",
-    },
-    {
-      logo:img,
-      name:"Techriya",
-    },
-   
-  ];
-
   return (
-    <div className="logos flex flex-col gap-5 overflow-hidden relative py-16 bg-[#131313] text-white">
-      {/* Gradients for fade effects */}
-      <p className="text-center text-[2rem] font-kindle  text-[#d6d6d6]">Our Sponsors</p>
-      <div className="absolute inset-y-0 left-0 w-[16rem] bg-gradient-to-r from-[#131313] via-black/20 to-transparent z-10"></div>
-      <div className="absolute inset-y-0 right-0 w-[16rem] bg-gradient-to-l from-[#131313] via-black/20 to-black/10 z-10"></div>
-
-      {/* Logos slide */}
-      <div className="logos-slide inline-flex animate-slide">
-        {/* Duplicate all logos for seamless effect */}
-        {[...logos, ...logos].map((logo, index) => (
-          <div key={index} className="logo-placeholder inline-flex flex-col justify-center mx-10">
-            <img src={logo.logo} className="h-[5rem] w-[16rem]" alt="" />
-            {logo.name} 
+    <div className="slider-container w-full bg-[#131313] overflow-hidden py-8 relative">
+      <p className='font-kindle text-center text-[2rem] text-white'> OUR SPONSORS </p>
+      <div className="slider flex items-center space-x-8 animate-scroll">
+        {sponsors.map((sponsor, index) => (
+          <div key={index} className="w-40 flex-shrink-0">
+            <img src={sponsor} alt={`Sponsor ${index + 1}`} className="w-full h-auto object-contain" />
+          </div>
+        ))}
+        {/** Duplicate for seamless scrolling **/}
+        {sponsors.map((sponsor, index) => (
+          <div key={index + sponsors.length} className="w-40 flex-shrink-0">
+            <img src={sponsor} alt={`Sponsor ${index + 1}`} className="w-full h-auto object-contain" />
           </div>
         ))}
       </div>

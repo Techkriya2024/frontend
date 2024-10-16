@@ -1,20 +1,24 @@
-@keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%); /* Move left by 50% of the duplicated set */
-    }
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
   }
-  
-  .animate-slide {
-    animation: 35s slide infinite linear;
+  100% {
+    transform: translateX(-50%);
   }
-  
-  .logos-slide {
-    display: inline-flex; /* Use inline-flex for horizontal layout */
+}
+
+.slider {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .slider {
+    animation-duration: 30s;
   }
-  
-  .logo-placeholder {
-    height: 50px; /* Height for the placeholder */
-  }
+}

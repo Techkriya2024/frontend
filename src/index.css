@@ -61,7 +61,7 @@
   }
   
   .bg-moving-gradient {
-    background-Image: radial-gradient( #1E676F, #003C45, #002027);
+    background-Image: radial-gradient( #003C45,#0e2c2d, #002027);
     background-size: 400% 400%;
     animation: moveGradient 15s ease infinite;
   }

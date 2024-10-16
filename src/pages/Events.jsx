@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import {BASE_URL} from "../services/APIs"
 import ButtonRow from "../components/Buttons";
 import EventCard from "../components/EventCard";
 import logo from "../assets/techriya_logo_mod.png"
@@ -10,7 +11,7 @@ const EventsPage = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        let url = "http://localhost:4000/api/v1/event/getAllEvents";
+        let url = BASE_URL+"/event/getAllEvents";
         const response = await axios.get(url);
         setEvents(response.data.data);
         setLoading(false);

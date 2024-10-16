@@ -6,15 +6,28 @@ const ButtonRow = ({ onClubSelect }) => {
   const buttonNames = [
     "AI&R",
     "I&E CELL",
-    "E-Yantra",
+    "E-YANTRA",
     "ECEA",
     "CSEA",
     "MEA",
-    "PRAYATNAM",
+    "MAGAZINE CLUB",
     "EEEA",
     "CEA",
     "GC",
     "TASKFORCE",
+    "Physical Education",
+    "NVE",
+    "Dhwani",
+    "MMEA",
+    "L&D",
+    "P&P",
+    "BEA",
+    "CHITRAM",
+    "Brindavanam",
+    "IEEE",
+  
+
+    
   ];
 
   const handleButtonClick = (clubName, index) => {

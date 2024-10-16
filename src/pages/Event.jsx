@@ -35,7 +35,7 @@ export default function Event() {
   const event = location.state;
   return (
     <>
-      <div className="bg-[#131313] h-max min-h-screen relative  flex flex-col justify-start w-full ">
+      <div className="bg-[#131313] h-max min-h-screen relative  flex flex-col sm:flex-row justify-start w-full ">
         <div className="relative w-full">
           <BackButton
             onClick={() => navigate(-1)}
@@ -44,17 +44,18 @@ export default function Event() {
             className="absolute left-3 top-3 bg-black rounded-full bg-opacity-50"
           />
           <div className="bg-white/40 backdrop-blur-sm backdrop-filter absolute w-full h-[4rem] font-bold font-tech text-[1.5rem] sm:text-[2rem] md:text-[3rem] bottom-0 pl-5 flex items-center">
-            <p> {event.name}</p>
+            <p> {event.clubName}</p>
           </div>
 
           <img
             src={event.image}
-            className="w-full h-[20rem] sm:h-[23rem] object-cover"
+            className="w-full h-[20rem] sm:h-screen object-cover"
             alt=""
           />
         </div>
 
-        <div className="w-full p-2  h-max flex items-center flex-col ">
+        <div className="w-full p-2  h-max md:h-screen flex items-center justify-center flex-col ">
+          <p className="text-white text-start w-full pl-3 text-[1.5rem] tracking-wider font-kindle ">{event.name}</p>
           <p className="text-white p-3">
             {event.description}
             

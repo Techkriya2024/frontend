@@ -33,7 +33,7 @@ const EventsPage = () => {
     </div>
  )   
 :
-      <div className="min-h-screen bg-black text-white relative">
+      <div className="h-max bg-black text-white relative">
         <div className="relative z-10">
           {/* Pass setSelectedClub to ButtonRow */}
           <ButtonRow onClubSelect={setSelectedClub} />

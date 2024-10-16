@@ -10,9 +10,11 @@ const ButtonRow = ({ onClubSelect }) => {
     "ECEA",
     "CSEA",
     "MEA",
-    "Paryatnam",
+    "PRAYATNAM",
     "EEEA",
     "CEA",
+    "GC",
+    "TASKFORCE",
   ];
 
   const handleButtonClick = (clubName, index) => {
@@ -30,7 +32,11 @@ const ButtonRow = ({ onClubSelect }) => {
             className={`flex-shrink-0 min-w-[150px] h-11 rounded-tl-lg border border-white font-bold
               py-2 px-4 mx-1 text-lg tracking-wider uppercase 
               transition-all duration-300 ease-in-out text-center 
-              ${activeButton === index ? "bg-white text-[#131313]" : "opacity-80 bg-transparent text-white"}`}
+              ${
+                activeButton === index
+                  ? "bg-white text-[#131313]"
+                  : "opacity-80 bg-transparent text-white"
+              }`}
           >
             {name}
           </button>

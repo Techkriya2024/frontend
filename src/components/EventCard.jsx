@@ -16,7 +16,7 @@ const EventCard = ({ event }) => {
           }}
         />
       <div
-        className="bg-[#D9D9D9] p-5  text-center relative w-[19.6rem] h-[15rem]"
+        className="bg-[#D9D9D9] p-5  text-center relative w-[19.6rem] h-[16rem]"
         style={{
           clipPath: "polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0% 100%)",
         }}
@@ -28,7 +28,7 @@ const EventCard = ({ event }) => {
           {event.clubName}
         </h2>
         <p className="font-orbitron text-sm text-black mt-2 leading-relaxed">
-          {event.description}
+        {event.description.slice(0, 88)}....
         </p>
         <div className="relative flex justify-center">
         <div className="absolute top-5 rounded-sm left-2 bg-black w-[15rem] h-[3.75rem] -z-10">

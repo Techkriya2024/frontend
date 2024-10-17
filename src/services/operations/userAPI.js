@@ -23,20 +23,21 @@ export function registerForEvent(eventId,token){
     }
 }
 
-export function visitEvent(eventId,token){
+export function visitEvent(eventId, token){
     return async(dispatch) => {
         const toastId = toast.loading("Please Wait...");
-        try{
-            const response = await APIconnector("POST",VISIT_AN_EVENT_API,{eventId},{Authorization: `Bearer ${token}`},{eventId});
+        try {
+            const response = await APIconnector("POST", VISIT_AN_EVENT_API(eventId), null, { Authorization: `Bearer ${token}` });
 
-            if(!response.data.success){
+            if (!response.data.success) {
                 throw new Error(response.data.message);
             }
-            toast.success("SuccessFully Visited the Event");
-        }catch(e){
+            toast.success("Successfully Visited the Event");
+        } catch (e) {
             toast.error("Unable to Visit the Event");
         }
         toast.dismiss(toastId);
-    }
+    };
 }
+
 

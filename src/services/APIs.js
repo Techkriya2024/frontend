@@ -12,5 +12,5 @@ export const endpoints = {
 
 export const userEndPoints = {
   REGISTER_FOR_AN_EVENT_API : BASE_URL + "/user/register",
-  VISIT_AN_EVENT_API : BASE_URL + "/user/visited"
+  VISIT_AN_EVENT_API: (eventId) => `${BASE_URL}/user/visited/${eventId}`
 }
